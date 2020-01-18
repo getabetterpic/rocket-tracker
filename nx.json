@@ -1,0 +1,22 @@
+{
+  "npmScope": "rocket-tracker",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "rocket-tracker": {
+      "tags": []
+    },
+    "rocket-tracker-e2e": {
+      "tags": [],
+      "implicitDependencies": ["rocket-tracker"]
+    }
+  }
+}
