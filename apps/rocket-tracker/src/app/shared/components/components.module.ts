@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ExternalApiComponent } from './external-api/external-api.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ExternalApiComponent } from './external-api/external-api.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FontAwesomeModule
   ],
   exports: [
     NavBarComponent

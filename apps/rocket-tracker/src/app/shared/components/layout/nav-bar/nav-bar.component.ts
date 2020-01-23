@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
 import { AuthService } from '../../../../core/services/auth.service';
 
 @Component({
@@ -8,5 +10,6 @@ import { AuthService } from '../../../../core/services/auth.service';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
+  public bars = faBars;
   constructor(public auth: AuthService) { }
 }
