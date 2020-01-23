@@ -1,7 +1,7 @@
 {
   "extends": "../../tslint.json",
   "rules": {
-    "directive-selector": [true, "attribute", "rocketTracker", "camelCase"],
-    "component-selector": [true, "element", "rocket-tracker", "kebab-case"]
+    "directive-selector": [true, "attribute", "rt", "camelCase"],
+    "component-selector": [true, "element", "rt", "kebab-case"]
   }
 }
