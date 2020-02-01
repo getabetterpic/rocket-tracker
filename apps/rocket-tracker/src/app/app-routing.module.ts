@@ -6,6 +6,11 @@ import { ProfileComponent } from './shared/components/profile/profile.component'
 import { AuthGuard } from './core/guards/auth.guard';
 import { AuthInterceptorService } from './core/interceptors/auth-interceptor/auth-interceptor.service';
 import { ExternalApiComponent } from './shared/components/external-api/external-api.component';
+import { MotorsComponent } from './shared/components/motors/motors.component';
+import { MyRocketsComponent } from './shared/components/my-rockets/my-rockets.component';
+import { RocketShowComponent } from './shared/components/rocket-show/rocket-show.component';
+import { NewRocketComponent } from './shared/components/new-rocket/new-rocket.component';
+import { NewManufacturerComponent } from './shared/components/new-manufacturer/new-manufacturer.component';
 
 const routes: Route[] = [
   {
@@ -20,6 +25,36 @@ const routes: Route[] = [
         path: 'external-api',
         component: ExternalApiComponent,
         canActivate: [AuthGuard]
+      },
+      {
+        path: 'motors',
+        component: MotorsComponent
+      },
+      {
+        path: 'manufacturers',
+        children: [
+          {
+            path: 'new',
+            component: NewManufacturerComponent
+          }
+        ]
+      },
+      {
+        path: 'my-rockets',
+        children: [
+          {
+            path: '',
+            component: MyRocketsComponent
+          },
+          {
+            path: 'new',
+            component: NewRocketComponent
+          },
+          {
+            path: ':rocketId',
+            component: RocketShowComponent
+          }
+        ]
       }
     ]
   }

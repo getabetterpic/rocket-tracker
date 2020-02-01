@@ -2,8 +2,8 @@
   <nav class="nav">
     <ul class="nav-list">
       <li class="nav-item"><a routerLink="/">Home</a></li>
-      <li class="nav-item" *ngIf="auth.loggedIn"><a routerLink="profile">Profile</a></li>
-      <li class="nav-item" *ngIf="auth.loggedIn"><a routerLink="external-api">External API</a></li>
+      <li class="nav-item"><a routerLink="motors">Motors</a></li>
+      <li class="nav-item" *ngIf="auth.loggedIn"><a routerLink="my-rockets">My Rockets</a></li>
     </ul>
     <button class="btn btn--primary" (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
     <button class="btn btn--primary" (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>

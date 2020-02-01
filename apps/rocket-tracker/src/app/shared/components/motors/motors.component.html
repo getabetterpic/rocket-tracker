@@ -1,0 +1,9 @@
+<label for="search">search</label>
+<input type="text" id="search" name="search" [formControl]="search">
+<ul>
+  <li *ngFor="let motor of displayMotors">
+    {{motor.manufacturer}} - {{motor.code}}
+  </li>
+</ul>
+<button class="btn btn--secondary" type="button" (click)="prevPage()">Previous Page</button>
+<button class="btn btn--secondary" type="button" (click)="nextPage()">Next Page</button>
