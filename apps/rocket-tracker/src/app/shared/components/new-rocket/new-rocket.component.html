@@ -1,0 +1,14 @@
+<form [formGroup]="rocket" (ngSubmit)="createRocket()">
+  <fieldset>
+    <label for="manufacturer">Manufacturer</label>
+    <select name="manufacturer" id="manufacturer" formControlName="manufacturerId">
+      <ng-container *ngFor="let man of manufacturers$ | async">
+        <option [value]="man.id">{{man.name}}</option>
+      </ng-container>
+    </select>
+    <a [routerLink]="['/manufacturers/new']" class="btn btn--secondary">Add New Manufacturer</a>
+    <label for="name">Rocket</label>
+    <input type="text" id="name" placeholder="Rocket Name" formControlName="name">
+  </fieldset>
+  <button type="submit" class="btn btn--primary">Create</button>
+</form>

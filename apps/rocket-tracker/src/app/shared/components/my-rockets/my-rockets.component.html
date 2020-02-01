@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let rocket of rockets$ | async">
+    <a [routerLink]="['./', rocket.id]">{{rocket.name}}</a>
+  </li>
+</ul>

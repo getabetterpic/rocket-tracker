@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'rocket-tracker-root',
+  selector: 'rt-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
